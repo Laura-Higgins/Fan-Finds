@@ -7,16 +7,24 @@ app.use(bodyParser.json())
 
 var client = new Twitter(twitterCred);
 
-var params = {q: 'Nikki Tutorials'}; //querying html input
+//querying html input
 
-client.get('search/tweets', params, function(error, tweets, response) {
-  tweets = tweets.statuses
-  if (!error) {
-    tweets.forEach((tweet) => {
-      console.log("++++++" + tweet.text + "+++++++++")
-    })
-  }
-});
+app.get('/tweets', function(req, res, next){
+  var params = req.query
+  client.get('search/tweets', params, function(error, tweets, response) {
+    tweets = tweets.statuses
+    if(error) {
+      console.log(error)
+    }
+    if (!error) {
+      console.log(tweets.map(function(tweet) {
+        var theTweet = {}
+        return { text: tweet.text }
+      }))
+      res.send(tweets[0])
+    }
+  });
+})
 
 app.listen(3000, () => {
   console.log('listening port 3000!')
