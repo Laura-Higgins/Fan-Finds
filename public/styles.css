@@ -17,9 +17,12 @@
 
 #tweet-container > .tweet {
   margin-bottom: 15px;
-  font-size: 18px;
+  font-size: 25px;
   background-color: #e2f6fc;
   font-family: 'Didact Gothic', sans-serif;
+  border-radius: 15px;
+  text-align: center;
+  padding: 20px;
 }
 
 #searchTitle {
@@ -27,5 +30,13 @@
   font-size: 36px;
   font-weight: bold;
   text-align: center;
-  margin-left: 40%;
+  margin-left: 35%;
+}
+
+.video {
+  margin-left: 10%;
+}
+
+#FanFindLogo {
+  font-size: 100px;
 }
