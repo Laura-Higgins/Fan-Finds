@@ -10,9 +10,22 @@
 
 .jumbotron {
   margin-top: 10%;
+  background-color: #f95f55;
+  color: white;
+  font-family: 'Didact Gothic', sans-serif;
 }
 
 #tweet-container > .tweet {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   font-size: 18px;
+  background-color: #e2f6fc;
+  font-family: 'Didact Gothic', sans-serif;
+}
+
+#searchTitle {
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-left: 40%;
 }

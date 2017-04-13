@@ -1,8 +1,8 @@
 var $twitterInput = document.querySelector('#twitter-input')
-var $twitterSubmit = document.querySelector('#twitter-submit')
+var $submitSearch = document.querySelector('#submit-search')
 var $tweetContainer = document.querySelector('#tweet-container')
 
-$twitterSubmit.addEventListener('click', function() {
+$submitSearch.addEventListener('click', function() {
   var queryValue = $twitterInput.value
   $tweetContainer.innerHTML = ''
 
