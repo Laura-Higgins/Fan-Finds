@@ -1,10 +1,15 @@
 var Twitter = require('twitter');
 var twitterCred = require('./twitter.json')
+var client = new Twitter(twitterCred);
+
+var youtube = require('youtube-search')
+var youTubeKey = require('./youtube.json')
+
 var express = require('express')
 var app = express()
 var bodyParser = require('body-parser')
+
 app.use(bodyParser.json())
-var client = new Twitter(twitterCred);
 
 app.get('/tweets', function(req, res, next){
   var params = req.query
@@ -22,6 +27,18 @@ app.get('/tweets', function(req, res, next){
   });
 })
 
+app.get('/videos', function (req, res, next){
+  var query = req.query.q
+  youtube(query, youTubeKey, function(error, content, response){
+    if(error) {
+      console.log(error)
+    }
+    if(!error) {
+      res.send(content.title)
+    }
+  })
+
+})
 app.use(express.static('public'))
 
 app.listen(3000, () => {
