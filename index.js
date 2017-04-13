@@ -34,7 +34,7 @@ app.get('/videos', function (req, res, next){
       console.log(error)
     }
     if(!error) {
-      res.send(content.title)
+      res.send(content)
     }
   })
 
