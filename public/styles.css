@@ -1,8 +1,18 @@
 #searchbar {
   margin-top: 10%;
-  margin-left: 25%;
+  margin-bottom: 5%;
+}
+
+#searchbar > .input-group {
+  max-width: 350px;
+  margin: auto;
 }
 
 .jumbotron {
   margin-top: 10%;
+}
+
+#tweet-container > .tweet {
+  margin-bottom: 10px;
+  font-size: 18px;
 }
