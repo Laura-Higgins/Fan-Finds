@@ -1,0 +1,30 @@
+{
+  "name": "FanFind",
+  "version": "1.0.0",
+  "description": "a search engine for fans who want organized social media of their favorite celebrities",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Laura-Higgins/FanFind.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Laura-Higgins/FanFind/issues"
+  },
+  "homepage": "https://github.com/Laura-Higgins/FanFind#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "request": "^2.81.0",
+    "twitter": "^1.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
