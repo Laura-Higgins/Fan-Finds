@@ -25,10 +25,12 @@ $submitSearch.addEventListener('click', function() {
     return response.json()
   }).then(function(videos) {
     videos.forEach(function(video) {
+      var $videoContainer = document.createElement('div')
+      $videoContainer.classList.add('embed-responsive', 'embed-responsive-16by9', 'video-container')
       var $video = document.createElement('iframe')
-      $video.classList.add('video')
       $video.src = "https://youtube.com/embed/" + video.id
-      $youtubeContainer.appendChild($video)
+      $videoContainer.appendChild($video)
+      $youtubeContainer.appendChild($videoContainer)
     })
   })
 })

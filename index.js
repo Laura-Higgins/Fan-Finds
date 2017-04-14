@@ -22,9 +22,9 @@ app.get('/tweets', function(req, res, next){
       var tweetText = tweets.map(function(tweet) {
         return { text: tweet.text }
       })
-      res.send(tweetText)
+        res.send(tweetText)
     }
-  });
+  })
 })
 
 app.get('/videos', function (req, res, next){
@@ -37,7 +37,6 @@ app.get('/videos', function (req, res, next){
       res.send(content)
     }
   })
-
 })
 app.use(express.static('public'))
 
