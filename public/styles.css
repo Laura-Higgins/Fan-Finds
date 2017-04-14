@@ -10,13 +10,16 @@
 
 .jumbotron {
   margin-top: 10%;
+  margin-left: 400px;
+  margin-right: 400px;
   background-color: #f95f55;
   color: white;
   font-family: 'Didact Gothic', sans-serif;
+  text-align: center;
 }
 
 #tweet-container > .tweet {
-  margin-bottom: 15px;
+  margin-bottom: 35px;
   font-size: 25px;
   background-color: #e2f6fc;
   font-family: 'Didact Gothic', sans-serif;
@@ -38,4 +41,8 @@
 
 #FanFindLogo {
   font-size: 100px;
+}
+
+#trends-container {
+  position: fixed;
 }

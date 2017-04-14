@@ -43,7 +43,6 @@ app.get('/videos', function (req, res, next){
 
 app.get('/trends', function (req, res, next){
   var query = req.query
-  console.log(query)
   googleTrends.interestOverTime(query, function(error, content, response){
     if(error) {
       console.log(error)

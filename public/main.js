@@ -21,6 +21,10 @@ $submitSearch.addEventListener('click', function() {
     })
   })
 
+  var source = "http://www.google.com/trends/fetchComponent?hl=en-US&q=" + queryValue + "&content=1&cid=TIMESERIES_GRAPH_0&export=5&w=918&h=818"
+  var $trends = document.querySelector('#trends')
+  $trends.src = source
+
   fetch('/videos?q=' + queryValue)
   .then(function(response){
     return response.json()
@@ -34,9 +38,4 @@ $submitSearch.addEventListener('click', function() {
       $youtubeContainer.appendChild($videoContainer)
     })
   })
-
-  var source = "http://www.google.com/trends/fetchComponent?hl=en-US&q=" + queryValue + "&content=1&cid=TIMESERIES_GRAPH_0&export=5&w=640&h=330"
-  var $trends = document.querySelector('#trends')
-  $trends.src = source
-
 })
