@@ -1,11 +1,10 @@
 var Twitter = require('twitter');
 var twitterCred = require('./twitter.json')
-var client = new Twitter(twitterCred);
+var twitter = new Twitter(twitterCred);
 
 var youtube = require('youtube-search')
 var youTubeKey = require('./youtube.json')
 
-var googleTrends = require('google-trends-api')
 
 var express = require('express')
 var app = express()
@@ -15,7 +14,7 @@ app.use(bodyParser.json())
 
 app.get('/tweets', function(req, res, next){
   var params = req.query
-  client.get('search/tweets', params, function(error, content, response) {
+  twitter.get('search/tweets', params, function(error, content, response) {
     tweets = content.statuses
     if(error) {
       console.log(error)
@@ -41,17 +40,6 @@ app.get('/videos', function (req, res, next){
   })
 })
 
-app.get('/trends', function (req, res, next){
-  var query = req.query
-  googleTrends.interestOverTime(query, function(error, content, response){
-    if(error) {
-      console.log(error)
-    }
-    if(!error) {
-      res.send(content)
-    }
-  })
-})
 app.use(express.static('public'))
 
 app.listen(3000, () => {
