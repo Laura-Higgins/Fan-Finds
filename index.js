@@ -5,6 +5,8 @@ var client = new Twitter(twitterCred);
 var youtube = require('youtube-search')
 var youTubeKey = require('./youtube.json')
 
+var googleTrends = require('google-trends-api')
+
 var express = require('express')
 var app = express()
 var bodyParser = require('body-parser')
@@ -30,6 +32,19 @@ app.get('/tweets', function(req, res, next){
 app.get('/videos', function (req, res, next){
   var query = req.query.q
   youtube(query, youTubeKey, function(error, content, response){
+    if(error) {
+      console.log(error)
+    }
+    if(!error) {
+      res.send(content)
+    }
+  })
+})
+
+app.get('/trends', function (req, res, next){
+  var query = req.query
+  console.log(query)
+  googleTrends.interestOverTime(query, function(error, content, response){
     if(error) {
       console.log(error)
     }

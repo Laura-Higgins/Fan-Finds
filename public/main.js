@@ -2,6 +2,7 @@ var $twitterInput = document.querySelector('#twitter-input')
 var $submitSearch = document.querySelector('#submit-search')
 var $tweetContainer = document.querySelector('#tweet-container')
 var $youtubeContainer = document.querySelector('#youtube-container')
+var trendsContainer = document.querySelector('#trends-container')
 
 $submitSearch.addEventListener('click', function() {
   var queryValue = $twitterInput.value
@@ -33,4 +34,9 @@ $submitSearch.addEventListener('click', function() {
       $youtubeContainer.appendChild($videoContainer)
     })
   })
+
+  var source = "http://www.google.com/trends/fetchComponent?hl=en-US&q=" + queryValue + "&content=1&cid=TIMESERIES_GRAPH_0&export=5&w=640&h=330"
+  var $trends = document.querySelector('#trends')
+  $trends.src = source
+
 })
