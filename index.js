@@ -4,7 +4,9 @@ var twitter = new Twitter(twitterCred);
 
 var youtube = require('youtube-search')
 var youTubeKey = require('./youtube.json')
-
+//
+// var Embedo = require('embedo')
+// var embedo = new Embedo()
 
 var express = require('express')
 var app = express()
@@ -15,13 +17,14 @@ app.use(bodyParser.json())
 app.get('/tweets', function(req, res, next){
   var params = req.query
   twitter.get('search/tweets', params, function(error, content, response) {
-    tweets = content.statuses
+    var tweets = content.statuses
     if(error) {
       console.log(error)
     }
     if (!error) {
       var tweetText = tweets.map(function(tweet) {
-        return { text: tweet.text }
+        // console.log(tweets)
+        return { name: tweet.user.screen_name, text: tweet.text }
       })
         res.send(tweetText)
     }

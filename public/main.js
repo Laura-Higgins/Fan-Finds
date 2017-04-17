@@ -1,10 +1,11 @@
 var $twitterInput = document.querySelector('#twitter-input')
-var $submitSearch = document.querySelector('#submit-search')
 var $tweetContainer = document.querySelector('#tweet-container')
 var $youtubeContainer = document.querySelector('#youtube-container')
-var trendsContainer = document.querySelector('#trends-container')
+var $trendsContainer = document.querySelector('#trends-container')
+var $searchForm = document.querySelector('#search-form')
 
-$submitSearch.addEventListener('click', function() {
+$searchForm.addEventListener('submit', function($event) {
+  $event.preventDefault()
   var queryValue = $twitterInput.value
   $tweetContainer.innerHTML = ''
   $youtubeContainer.innerHTML = ''
@@ -16,14 +17,19 @@ $submitSearch.addEventListener('click', function() {
     tweets.forEach((tweet) => {
       var $tweet = document.createElement('div')
       $tweet.classList.add('tweet')
-      $tweet.textContent = tweet.text
+      $tweet.textContent = tweet.name
+      var $text = document.createElement('div')
+      $text.classList.add('tweet')
+      $text.textContent = tweet.text
       $tweetContainer.appendChild($tweet)
+      $tweetContainer.appendChild($text)
     })
   })
 
-  var source = "http://www.google.com/trends/fetchComponent?hl=en-US&q=" + queryValue + "&content=1&cid=TIMESERIES_GRAPH_0&export=5&w=918&h=818"
+  var source = "http://www.google.com/trends/fetchComponent?hl=en-US&q=" + queryValue + "&content=1&cid=TIMESERIES_GRAPH_0&export=5&w=" + $trendsContainer.offsetWidth + "&h=330"
   var $trends = document.querySelector('#trends')
   $trends.src = source
+  $trends.width = $trendsContainer.offsetWidth
 
   fetch('/videos?q=' + queryValue)
   .then(function(response){
