@@ -8,28 +8,35 @@
     <title>FanFind</title>
   </head>
   <body>
-    <div class= "container">
+    <div class= "container-fluid">
       <div class="jumbotron">
         <h1 class="display-3" id="FanFindLogo">Welcome to FanFind!</h1>
-        <p class="lead">Search for anyone. Find a comprehensive collection of videos and tweets.</p>
+        <p class="lead">Find a comprehensive collection of videos, tweets and trends.</p>
         <hr class="my-4">
         <p>Enter a name or keyword and dive in...</p>
       </div>
       <div class="row">
         <div class="col-xs-12" id="searchbar">
-          <span id="searchTitle">Search for ANYONE</span>
-          <div class="input-group">
-            <input type="text" class="form-control" id="twitter-input" placeholder="Search for..." />
-            <span class="input-group-btn">
-              <button class="btn btn-secondary" type="button" id="submit-search">Go!</button>
-            </span>
-          </div>
+          <div id="searchTitle">Search for ANYONE</div>
+          <form id="search-form">
+            <div class="input-group">
+              <input type="text" class="form-control" id="twitter-input" placeholder="Search for..." />
+              <span class="input-group-btn">
+                <button class="btn btn-secondary" type="submit" id="submit-search">Go!</button>
+              </span>
+            </div>
+          </form>
         </div>
-        <div class="col-xs-12 col-md-6">
+        <div class="col-xs-4">
           <div id="tweet-container">
           </div>
         </div>
-        <div class="col-xs-12 col-md-6">
+        <div class="col-xs-4">
+          <div id="trends-container">
+            <iframe id="trends" height="330" style="border: none;" scrolling="no"></iframe>
+          </div>
+        </div>
+        <div class="col-xs-4">
           <div id="youtube-container">
           </div>
         </div>

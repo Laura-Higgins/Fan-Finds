@@ -1,22 +1,32 @@
 #searchbar {
-  margin-top: 10%;
+  margin-top: 50px;
   margin-bottom: 5%;
 }
 
-#searchbar > .input-group {
+#searchbar .input-group {
   max-width: 350px;
   margin: auto;
 }
 
 .jumbotron {
-  margin-top: 10%;
+  margin-top: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
   background-color: #f95f55;
   color: white;
   font-family: 'Didact Gothic', sans-serif;
+  text-align: center;
+}
+
+#tweet-container {
+  margin-bottom: 50px;
+  height: 350px;
+  overflow: auto;
 }
 
 #tweet-container > .tweet {
-  margin-bottom: 15px;
+  margin-bottom: 35px;
+  margin-left: 20px;
   font-size: 25px;
   background-color: #e2f6fc;
   font-family: 'Didact Gothic', sans-serif;
@@ -25,18 +35,28 @@
   padding: 20px;
 }
 
+#youtube-container {
+  margin-right: 20px;
+  margin-bottom: 50px;
+  overflow: auto;
+  height: 350px;
+}
+
 #searchTitle {
   font-family: 'Didact Gothic', sans-serif;
   font-size: 36px;
   font-weight: bold;
   text-align: center;
-  margin-left: 35%;
 }
 
-.video {
-  margin-left: 10%;
+.video-container {
+  margin-bottom: 15px;
 }
 
 #FanFindLogo {
   font-size: 100px;
+}
+
+#trends-container {
+  margin-bottom: 50px;
 }
