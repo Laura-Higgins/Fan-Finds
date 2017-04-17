@@ -4,9 +4,6 @@ var twitter = new Twitter(twitterCred);
 
 var youtube = require('youtube-search')
 var youTubeKey = require('./youtube.json')
-//
-// var Embedo = require('embedo')
-// var embedo = new Embedo()
 
 var express = require('express')
 var app = express()
@@ -22,11 +19,11 @@ app.get('/tweets', function(req, res, next){
       console.log(error)
     }
     if (!error) {
-      var tweetText = tweets.map(function(tweet) {
-        // console.log(tweets)
-        return { name: tweet.user.screen_name, text: tweet.text }
+      var tweetResults = tweets.map(function(tweet) {
+        // console.log(tweet)
+        return { name: tweet.user.screen_name, text: tweet.text, created_at: tweet.created_at}
       })
-        res.send(tweetText)
+        res.send(tweetResults)
     }
   })
 })
