@@ -16,13 +16,15 @@ $searchForm.addEventListener('submit', function($event) {
   }).then(function(tweets) {
     tweets.forEach((tweet) => {
       var $tweet = document.createElement('div')
+      $tweet.textContent = tweet.name + " " + "tweeted"
       $tweet.classList.add('tweet')
-      $tweet.textContent = tweet.name
-      var $text = document.createElement('div')
-      $text.classList.add('tweet')
+      var $text = document.createElement('p')
       $text.textContent = tweet.text
+      var $timeStamp = document.createElement('p')
+      $timeStamp.textContent = tweet.created_at
       $tweetContainer.appendChild($tweet)
-      $tweetContainer.appendChild($text)
+      $tweet.appendChild($text)
+      $tweet.appendChild($timeStamp)
     })
   })
 
