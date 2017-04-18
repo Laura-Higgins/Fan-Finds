@@ -3,12 +3,14 @@ var $tweetContainer = document.querySelector('#tweet-container')
 var $youtubeContainer = document.querySelector('#youtube-container')
 var $trendsContainer = document.querySelector('#trends-container')
 var $searchForm = document.querySelector('#search-form')
+var $wikipage = document.querySelector('#wiki-page')
 
 $searchForm.addEventListener('submit', function($event) {
   $event.preventDefault()
   var queryValue = $twitterInput.value
   $tweetContainer.innerHTML = ''
   $youtubeContainer.innerHTML = ''
+  $wikipage.innerHTML = ''
 
   fetch('/tweets?q=' + queryValue)
   .then(function(response){
@@ -25,7 +27,8 @@ $searchForm.addEventListener('submit', function($event) {
       $text.textContent = tweet.text
       var $timeStamp = document.createElement('p')
       $timeStamp.classList.add('panel-body')
-      $timeStamp.textContent = tweet.created_at
+      var date = new Date(tweet.created_at)
+      $timeStamp.textContent = date.toDateString()
       $tweetContainer.appendChild($tweet)
       $tweet.appendChild($username)
       $tweet.appendChild($text)
@@ -37,6 +40,22 @@ $searchForm.addEventListener('submit', function($event) {
   var $trends = document.querySelector('#trends')
   $trends.src = source
   $trends.width = $trendsContainer.offsetWidth
+
+  fetch('/wiki?search=' + queryValue)
+  .then(function(response) {
+    return response.json()
+  }).then(function(article){
+    var $title = document.createElement('div')
+    $title.textContent = article[1][0]
+    var $content = document.createElement('p')
+    $content.textContent = article[2][0]
+    var $link = document.createElement('a')
+    $link.href = article[3][0]
+    $link.textContent = article[3][0]
+    $wikipage.appendChild($title)
+    $wikipage.appendChild($content)
+    $wikipage.appendChild($link)
+  })
 
   fetch('/videos?q=' + queryValue)
   .then(function(response){

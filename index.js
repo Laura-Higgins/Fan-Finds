@@ -8,6 +8,7 @@ var youTubeKey = require('./youtube.json')
 var express = require('express')
 var app = express()
 var bodyParser = require('body-parser')
+var request = require('request')
 
 app.use(bodyParser.json())
 
@@ -20,10 +21,20 @@ app.get('/tweets', function(req, res, next){
     }
     if (!error) {
       var tweetResults = tweets.map(function(tweet) {
-        // console.log(tweet)
         return { name: tweet.user.screen_name, text: tweet.text, created_at: tweet.created_at}
       })
         res.send(tweetResults)
+    }
+  })
+})
+
+app.get('/wiki', function(req, res, next) {
+  var params = req.query.search
+  request("https://en.wikipedia.org/w/api.php?action=opensearch&search=" + params + "&limit=15&format=json", function(error, response, content){
+    if(error) {
+      console.log(error)
+    } else {
+      res.send(content)
     }
   })
 })
