@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Laura-Higgins/FanFind#readme",
   "dependencies": {
+    "animate.css": "^3.5.2",
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
     "request": "^2.81.0",

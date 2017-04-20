@@ -1,6 +1,68 @@
+body {
+  background-color: #f8fcfe;
+}
+
+h1 {
+  font-size: 72px;
+  text-align: center;
+  font-family: 'Didact Gothic', sans-serif;
+}
+
+.fade {
+  transition: opacity 3000ms ease;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+h4 {
+  margin-top: 40px;
+}
+
+.in {
+  opacity: 1;
+}
+
+.intro {
+  text-align: center;
+  font-family: 'Didact Gothic', sans-serif;
+  animation-duration: 2s;
+  animation-name: slidein;
+}
+
+.linear-gardient {
+  background: -prefix-linear-gradient(left, blue, white);
+}
+
+.modal-body {
+  overflow-y: auto;
+  max-height: 600px;
+  text-align: center;
+  font-size: 15px;
+}
+
+#myTwitterModalLabel {
+  text-align: center;
+  font-family: 'Didact Gothic', sans-serif;
+}
+
+#myYoutubeModalLabel {
+  text-align: center;
+  font-family: 'Didact Gothic', sans-serif;
+}
+
 #searchbar {
-  margin-top: 50px;
-  margin-bottom: 5%;
+  margin-bottom: 25px;
+  margin-top: 15px;
 }
 
 #searchbar .input-group {
@@ -8,19 +70,45 @@
   margin: auto;
 }
 
-.jumbotron {
-  margin-top: 50px;
-  margin-left: 100px;
-  margin-right: 100px;
-  background-color: #f95f55;
-  color: white;
+#searchTitle {
   font-family: 'Didact Gothic', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
   text-align: center;
 }
 
+.thumbnails {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#trends-container {
+  margin-bottom: 10px;
+}
+
+#trendsHeader {
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 30px;
+  margin-bottom: 5px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+#top-row {
+  margin-top: 10px;
+}
+
+#twitterHeader {
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 30px;
+  margin-bottom: 5px;
+  text-align: center;
+  text-decoration: underline;
+}
+
 #tweet-container {
-  margin-bottom: 50px;
-  height: 550px;
+  margin-bottom: 150px;
+  height: 450px;
   overflow: auto;
 }
 
@@ -28,22 +116,7 @@
   margin-bottom: 15px;
   border-radius: 15px;
   font-size: 25px;
-  /*background-color: #e2f6fc;*/
   font-family: 'Didact Gothic', sans-serif;
-  text-align: center;
-}
-
-#youtube-container {
-  margin-right: 20px;
-  margin-bottom: 50px;
-  overflow: auto;
-  height: 550px;
-}
-
-#searchTitle {
-  font-family: 'Didact Gothic', sans-serif;
-  font-size: 36px;
-  font-weight: bold;
   text-align: center;
 }
 
@@ -51,10 +124,51 @@
   margin-bottom: 15px;
 }
 
-#FanFindLogo {
-  font-size: 100px;
+#wikiHeader {
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 30px;
+  margin-bottom: 5px;
+  text-align: center;
+  text-decoration: underline;
 }
 
-#trends-container {
-  margin-bottom: 50px;
+#wiki-page {
+  margin-top: 15px;
+  text-align: center;
+  background-color: #ffe1df;
+  border-radius: 15px;
+}
+
+.wikiStyles {
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.wikiTitle {
+  font-family: 'Didact Gothic', sans-serif;
+  text-align: center;
+  font-size: 30px;
+  padding-bottom: 10px;
+  padding-top: 15px;
+}
+
+#youtube-container {
+  margin-right: 20px;
+  margin-bottom: 150px;
+  overflow: auto;
+  height: 450px;
+}
+
+.youtubeIframe {
+  height: 400px;
+  width: 500px;
+}
+
+#youtubeHeader {
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 30px;
+  margin-bottom: 5px;
+  text-align: center;
+  text-decoration: underline;
 }
