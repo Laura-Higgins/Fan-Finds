@@ -3,25 +3,14 @@ body {
 }
 
 h1 {
-  font-size: 72px;
+  font-size: 100px;
   text-align: center;
-  font-family: 'Didact Gothic', sans-serif;
+  font-family: 'Text Me One', sans-serif;
+  margin-top: 55px;
 }
 
 .fade {
   transition: opacity 3000ms ease;
-}
-
-@keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 300%;
-  }
-
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
 }
 
 h4 {
@@ -34,13 +23,8 @@ h4 {
 
 .intro {
   text-align: center;
-  font-family: 'Didact Gothic', sans-serif;
-  animation-duration: 2s;
-  animation-name: slidein;
-}
-
-.linear-gardient {
-  background: -prefix-linear-gradient(left, blue, white);
+  font-size: 24px;
+  font-family: 'Text Me One', sans-serif;
 }
 
 .modal-body {
@@ -52,12 +36,12 @@ h4 {
 
 #myTwitterModalLabel {
   text-align: center;
-  font-family: 'Didact Gothic', sans-serif;
+  font-family: 'Arsenal', sans-serif;
 }
 
 #myYoutubeModalLabel {
   text-align: center;
-  font-family: 'Didact Gothic', sans-serif;
+  font-family: 'Arsenal', sans-serif;
 }
 
 #searchbar {
@@ -71,7 +55,7 @@ h4 {
 }
 
 #searchTitle {
-  font-family: 'Didact Gothic', sans-serif;
+  font-family: 'Text Me One', sans-serif;
   font-size: 24px;
   font-weight: bold;
   text-align: center;
@@ -87,7 +71,7 @@ h4 {
 }
 
 #trendsHeader {
-  font-family: 'Didact Gothic', sans-serif;
+  font-family: 'Text Me One', sans-serif;
   font-size: 30px;
   margin-bottom: 5px;
   text-align: center;
@@ -99,7 +83,7 @@ h4 {
 }
 
 #twitterHeader {
-  font-family: 'Didact Gothic', sans-serif;
+  font-family: 'Text Me One', sans-serif;
   font-size: 30px;
   margin-bottom: 5px;
   text-align: center;
@@ -116,7 +100,7 @@ h4 {
   margin-bottom: 15px;
   border-radius: 15px;
   font-size: 25px;
-  font-family: 'Didact Gothic', sans-serif;
+  font-family: 'Arsenal', sans-serif;
   text-align: center;
 }
 
@@ -125,7 +109,7 @@ h4 {
 }
 
 #wikiHeader {
-  font-family: 'Didact Gothic', sans-serif;
+  font-family: 'Text Me One', sans-serif;
   font-size: 30px;
   margin-bottom: 5px;
   text-align: center;
@@ -135,22 +119,23 @@ h4 {
 #wiki-page {
   margin-top: 15px;
   text-align: center;
-  background-color: #ffe1df;
+  background-color: #f1f9ff;
   border-radius: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .wikiStyles {
-  font-family: 'Didact Gothic', sans-serif;
+  font-family: 'Arsenal', sans-serif;
   font-size: 20px;
   margin-bottom: 25px;
 }
 
 .wikiTitle {
-  font-family: 'Didact Gothic', sans-serif;
+  font-family: 'Arsenal', sans-serif;
   text-align: center;
-  font-size: 30px;
-  padding-bottom: 10px;
-  padding-top: 15px;
+  font-size: 45px;
+  padding-top: 10px;
 }
 
 #youtube-container {
@@ -166,7 +151,7 @@ h4 {
 }
 
 #youtubeHeader {
-  font-family: 'Didact Gothic', sans-serif;
+  font-family: 'Text Me One', sans-serif;
   font-size: 30px;
   margin-bottom: 5px;
   text-align: center;
