@@ -76,6 +76,7 @@ h1 {
 #searchbar .input-group {
   max-width: 350px;
   margin: auto;
+  font-size: 16px;
 }
 
 #searchTitle {
