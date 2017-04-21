@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Arsenal|Bungee+Hairline|Chathura|Megrim|Text+Me+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Arsenal|Text+Me+One" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -11,16 +11,16 @@
   </head>
   <body>
     <div class= "container-fluid">
-      <h1 id="title" class="animated fadeInUp">Fan <i class="fa fa-search" aria-hidden="true"></i> Finds</h1>
-      <h3 class="intro animated fadeInUp">Want to know everything?</h3>
+      <h1 id="title" class="animated fadeInUp">Fan <i class="fa fa-search" aria-hidden="true"></i> <span id="finds">Finds</span></h1>
+      <h3 id="tagline" class="intro animated fadeInUp">Want to know everything?</h3>
       <h4 class="intro animated fadeInUp">Search <i>anything</i> and get EVERYTHING. Tweets, Trends, Wikipedia, and Youtube.</h4>
       <h4 class="intro animated fadeInUp"> All at the same time.</h4>
       <div class="row">
         <div class="col-xs-12" id="searchbar">
-          <div id="searchTitle" class="animated fadeInUp">Search for ANYTHING</div>
+          <div id="searchTitle" class="animated fadeInUp">Search for WHATEVER</div>
           <form id="search-form">
             <div class="input-group animated fadeInUpBig">
-              <input type="text" class="form-control" id="twitter-input" placeholder="Search for..." />
+              <input type="text" class="form-control" id="twitter-input" placeholder="Search here..." />
               <span class="input-group-btn">
                 <button class="btn btn-secondary" type="submit" id="submit-search">Go!</button>
               </span>
@@ -29,14 +29,14 @@
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container" id="data">
       <div class="row" id="top-row">
         <div class="col-xs-6">
-          <div id="wikiHeader"></div>
+          <div id="wikiHeader" class="header"></div>
           <div id ="wiki-page" class="fade"></div>
         </div>
         <div class="col-xs-6">
-          <div id="trendsHeader"></div>
+          <div id="trendsHeader" class="header"></div>
           <div id="trends-container" class="fade">
             <iframe id="trends" height="330" style="border: none;" scrolling="no"></iframe>
           </div>
@@ -44,11 +44,11 @@
       </div>
       <div class="row">
         <div class="col-xs-6">
-          <div id ="twitterHeader"></div>
+          <div id="twitterHeader" class="header"></div>
           <div id="tweet-container" class="fade"></div>
         </div>
         <div class="col-xs-6">
-          <div id="youtubeHeader"></div>
+          <div id="youtubeHeader" class="header"></div>
           <div id="youtube-container"></div>
         </div>
       </div>
@@ -60,7 +60,7 @@
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             <h4 class="modal-title" id="myTwitterModalLabel">What's happening on Twitter...</h4>
           </div>
-          <div class="modal-body" id="twitter-modal">This is where the text should go..
+          <div class="modal-body" id="twitter-modal">
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>

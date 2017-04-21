@@ -1,9 +1,16 @@
 var Twitter = require('twitter');
-var twitterCred = require('./twitter.json')
+if (process.env.NODE_ENV === "production"){
+ var twitterCred = JSON.parse(process.env.Twitter_API_Key)
+ var youTubeKey = JSON.parse(process.env.Youtube_API_Key)
+}
+else {
+  var twitterCred = require('./twitter.json')
+  var youTubeKey = require('./youtube.json')
+}
+
 var twitter = new Twitter(twitterCred);
 
 var youtube = require('youtube-search')
-var youTubeKey = require('./youtube.json')
 
 var express = require('express')
 var app = express()
@@ -21,7 +28,7 @@ app.get('/tweets', function(req, res, next){
     }
     if (!error) {
       var tweetResults = tweets.map(function(tweet) {
-        return { name: tweet.user.screen_name, text: tweet.text, created_at: tweet.created_at}
+        return { name: tweet.user.screen_name, text: tweet.text, created_at: tweet.created_at }
       })
         res.send(tweetResults)
     }
@@ -52,7 +59,7 @@ app.get('/videos', function (req, res, next){
 })
 
 app.use(express.static('public'))
-
-app.listen(3000, () => {
+var port = process.env.PORT || 3000
+app.listen(port, () => {
   console.log('listening port 3000!')
 })
