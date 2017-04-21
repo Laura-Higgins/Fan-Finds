@@ -118,6 +118,10 @@ h1 {
   text-align: center;
 }
 
+#twitter-input {
+  font-size: 16px;
+}
+
 .video-container {
   margin-bottom: 15px;
 }

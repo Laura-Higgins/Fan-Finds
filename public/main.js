@@ -50,7 +50,7 @@ $('#myYoutubeModal').on('hidden.bs.modal', function(event){
 
 function renderTweets(tweets) {
   var $title = document.querySelector('#twitterHeader')
-  $title.textContent = "Twitter" 
+  $title.textContent = "Twitter"
   tweets.forEach((tweet) => {
     var $tweet = document.createElement('div')
     $tweet.classList.add('tweet', 'panel', 'panel-info')
