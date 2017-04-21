@@ -2,6 +2,18 @@ body {
   background-color: #f8fcfe;
 }
 
+.fade {
+  transition: opacity 3000ms ease;
+}
+
+#finds {
+  color: #8c1919;
+}
+
+h4 {
+  margin-top: 40px;
+}
+
 h1 {
   font-size: 100px;
   text-align: center;
@@ -9,12 +21,12 @@ h1 {
   margin-top: 55px;
 }
 
-.fade {
-  transition: opacity 3000ms ease;
-}
-
-h4 {
-  margin-top: 40px;
+.header {
+  font-family: 'Text Me One', sans-serif;
+  font-size: 45px;
+  margin-bottom: 5px;
+  text-align: center;
+  text-decoration: underline;
 }
 
 .in {
@@ -37,11 +49,23 @@ h4 {
 #myTwitterModalLabel {
   text-align: center;
   font-family: 'Arsenal', sans-serif;
+  font-size: 32px;
 }
 
 #myYoutubeModalLabel {
   text-align: center;
   font-family: 'Arsenal', sans-serif;
+  font-size: 42px;
+}
+
+.play-button {
+  font-size: 67px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  color: white;
+  text-shadow: 5px 5px black;
 }
 
 #searchbar {
@@ -61,33 +85,22 @@ h4 {
   text-align: center;
 }
 
+#tagline {
+  font-size: 46px;
+}
+
 .thumbnails {
   text-align: center;
   margin-bottom: 15px;
+  position: relative;
 }
 
 #trends-container {
   margin-bottom: 10px;
 }
 
-#trendsHeader {
-  font-family: 'Text Me One', sans-serif;
-  font-size: 30px;
-  margin-bottom: 5px;
-  text-align: center;
-  text-decoration: underline;
-}
-
 #top-row {
   margin-top: 10px;
-}
-
-#twitterHeader {
-  font-family: 'Text Me One', sans-serif;
-  font-size: 30px;
-  margin-bottom: 5px;
-  text-align: center;
-  text-decoration: underline;
 }
 
 #tweet-container {
@@ -106,14 +119,6 @@ h4 {
 
 .video-container {
   margin-bottom: 15px;
-}
-
-#wikiHeader {
-  font-family: 'Text Me One', sans-serif;
-  font-size: 30px;
-  margin-bottom: 5px;
-  text-align: center;
-  text-decoration: underline;
 }
 
 #wiki-page {
@@ -148,12 +153,4 @@ h4 {
 .youtubeIframe {
   height: 400px;
   width: 500px;
-}
-
-#youtubeHeader {
-  font-family: 'Text Me One', sans-serif;
-  font-size: 30px;
-  margin-bottom: 5px;
-  text-align: center;
-  text-decoration: underline;
 }
